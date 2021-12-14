@@ -40,6 +40,7 @@
  */
 
 typedef uint16_t hal_timer_t;
+//#define TIMER_NUM          14 // Maple supports up to 14 timers
 #define HAL_TIMER_TYPE_MAX 0xFFFF
 
 #define HAL_TIMER_RATE uint32_t(F_CPU)  // frequency of timers peripherals
@@ -199,3 +200,4 @@ FORCE_INLINE static void timer_no_ARR_preload_ARPE(timer_dev *dev) {
 void timer_set_interrupt_priority(uint_fast8_t timer_num, uint_fast8_t priority);
 
 #define TIMER_OC_NO_PRELOAD 0 // Need to disable preload also on compare registers.
+
